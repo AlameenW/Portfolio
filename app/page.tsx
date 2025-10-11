@@ -5,6 +5,7 @@ import { title } from "process";
 import { useEffect, useState } from "react";
 import Intro from "./pages/Intro";
 import About from "./pages/About";
+import Projects from "./pages/Projects";
 import icons from "./icons";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,6 +77,7 @@ export default function Home() {
       <main>
         <Intro></Intro>
         <About></About>
+        <Projects></Projects>
       </main>
 
       <footer className="py-8 border-t border-yellow-400/10">

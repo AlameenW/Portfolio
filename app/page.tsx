@@ -7,6 +7,7 @@ import Intro from "./pages/Intro";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import icons from "./icons";
+import Contact from "./pages/Contact";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -34,7 +35,6 @@ export default function Home() {
     { id: "home", title: "Home" },
     { id: "about", title: "About" },
     { id: "projects", title: "Projects" },
-    { id: "blogs", title: "Blogs" },
     { id: "contact", title: "Contact" },
   ];
 
@@ -78,6 +78,7 @@ export default function Home() {
         <Intro></Intro>
         <About></About>
         <Projects></Projects>
+        <Contact></Contact>
       </main>
 
       <footer className="py-8 border-t border-yellow-400/10">
@@ -101,7 +102,7 @@ export default function Home() {
           </div>
           <p>
             &copy; {new Date().getFullYear()} Alameen Adeku. All Rights
-            Reserved.
+            Reserved. Built with Next JS & Tailwind.
           </p>
         </div>
       </footer>

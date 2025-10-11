@@ -7,12 +7,12 @@ const Intro = () => {
             Alameen Adeku
           </h1>
           <p className="text-2xl md:text-4xl font-light text-yellow-400 mt-4 animate-pulse">
-            Front & Backend Developer
+            Full Stack Engineer | AI & ML.
           </p>
           <p className="text-gray-300 max-w-2xl mx-auto mt-8 text-lg">
-            I build beautiful, responsive, and highly performant web
-            applications that provide exceptional user experiences. Turning
-            ideas into real life products is my calling.
+            I love building full-scale web applications from concept to
+            deployment. Currently diving deep into AI, machine learning, and
+            neural networks.
           </p>
           <a
             href="#contact"

@@ -12,7 +12,8 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const sections = ["home", "about", "projects", "blogs", "contact"];
-  const { TwitterIcon, GithubIcon, LinkedinIcon } = icons;
+  const { TwitterIcon, GithubIcon, LinkedinIcon, EmailIcon } = icons;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -51,7 +52,7 @@ export default function Home() {
           <a href="#home" className="text-2xl font-bold text-yellow-400">
             AA
           </a>
-
+          {/* Desktop navigation */}
           <ul className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <li key={link.id}>
@@ -68,9 +69,34 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <div className="md:hidden">
-            {/* Mobile menu button could go here */}
-          </div>
+          {/* Mobile Hamburger Button */}
+          <button
+            className="md:hidden text-yellow-400 focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isMobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
         </nav>
       </header>
 
@@ -80,6 +106,62 @@ export default function Home() {
         <Projects></Projects>
         <Contact></Contact>
       </main>
+
+      {/* Mobile Sidebar */}
+      {isMobileMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
+          ></div>
+
+          {/* Sidebar */}
+          <div className="fixed top-0 right-0 h-full w-64 bg-gray-900 z-50 transform transition-transform duration-300 ease-in-out md:hidden">
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-8">
+                <span className="text-2xl font-bold text-yellow-400">Menu</span>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-yellow-400"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <ul className="space-y-4">
+                {navLinks.map((link) => (
+                  <li key={link.id}>
+                    <a
+                      href={`#${link.id}`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block text-lg py-3 px-4 rounded-lg transition-all duration-300 ${
+                        activeSection === link.id
+                          ? "text-yellow-400 bg-yellow-400/10 font-bold"
+                          : "text-gray-300 hover:text-yellow-400 hover:bg-gray-800"
+                      }`}
+                    >
+                      {link.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </>
+      )}
 
       <footer className="py-8 border-t border-yellow-400/10">
         <div className="container mx-auto px-6 text-center text-gray-500">
@@ -96,8 +178,11 @@ export default function Home() {
             >
               <LinkedinIcon />
             </a>
-            <a href="#" className="hover:text-yellow-400 transition-colors">
-              <TwitterIcon />
+            <a
+              href="#contact"
+              className="hover:text-yellow-400 transition-colors"
+            >
+              <EmailIcon />
             </a>
           </div>
           <p>

@@ -4,12 +4,13 @@ import Image from "next/image";
 import { title } from "process";
 import { useEffect, useState } from "react";
 import Intro from "./pages/Intro";
+import About from "./pages/About";
 import icons from "./icons";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const sections = ["home", "about", "projects", "blogs", "contact"];
-  const {TwitterIcon, GithubIcon, LinkedinIcon} = icons;
+  const { TwitterIcon, GithubIcon, LinkedinIcon } = icons;
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -74,23 +75,31 @@ export default function Home() {
 
       <main>
         <Intro></Intro>
+        <About></About>
       </main>
 
       <footer className="py-8 border-t border-yellow-400/10">
         <div className="container mx-auto px-6 text-center text-gray-500">
           <div className="flex justify-center space-x-6 mb-4">
+            <a
+              href="https://github.com/AlameenW"
+              className="hover:text-yellow-400 transition-colors"
+            >
+              <GithubIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/alameen-adeku-2507492b6/"
+              className="hover:text-yellow-400 transition-colors"
+            >
+              <LinkedinIcon />
+            </a>
             <a href="#" className="hover:text-yellow-400 transition-colors">
               <TwitterIcon />
             </a>
-            <a href="#" className="hover:text-yellow-400 transition-colors">
-              <GithubIcon />
-            </a>
-            <a href="#" className="hover:text-yellow-400 transition-colors">
-              <LinkedinIcon />
-            </a>
           </div>
           <p>
-            &copy; {new Date().getFullYear()} Jane Doe. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Alameen Adeku. All Rights
+            Reserved.
           </p>
         </div>
       </footer>

@@ -5,9 +5,9 @@ import { title } from "process";
 import { useEffect, useState } from "react";
 import Intro from "./pages/Intro";
 import About from "./pages/About";
-import Projects from "./pages/Projects";
 import icons from "./icons";
 import Contact from "./pages/Contact";
+import FeaturedProjects from "./components/FeaturedProjects";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -101,10 +101,10 @@ export default function Home() {
       </header>
 
       <main>
-        <Intro></Intro>
-        <About></About>
-        <Projects></Projects>
-        <Contact></Contact>
+        <Intro/>
+        <About/>
+        <FeaturedProjects/>
+        <Contact/>
       </main>
 
       {/* Mobile Sidebar */}

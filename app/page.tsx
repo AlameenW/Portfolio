@@ -117,7 +117,7 @@ export default function Home() {
           ></div>
 
           {/* Sidebar */}
-          <div className="fixed top-0 right-0 h-full w-64 bg-gray-900 z-50 transform transition-transform duration-300 ease-in-out md:hidden">
+          <div className="fixed top-0 right-0 h-full w-64 bg-blackzno z-50 transform transition-transform duration-300 ease-in-out md:hidden">
             <div className="p-6">
               <div className="flex justify-between items-center mb-8">
                 <span className="text-2xl font-bold text-yellow-400">Menu</span>

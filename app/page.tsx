@@ -69,10 +69,14 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          {/* Mobile Hamburger Button */}
+          {/* Mobile Hamburger Button (hidden while sidebar open to avoid overlap) */}
           <button
-            className="md:hidden text-yellow-400 focus:outline-none"
+            className={`md:hidden text-yellow-400 focus:outline-none transition-opacity duration-200 ${
+              isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-expanded={isMobileMenuOpen}
+            aria-label="Toggle menu"
           >
             <svg
               className="w-6 h-6"
@@ -80,31 +84,22 @@ export default function Home() {
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              {isMobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </nav>
       </header>
 
       <main>
-        <Intro/>
-        <About/>
-        <FeaturedProjects/>
-        <Contact/>
+        <Intro />
+        <About />
+        <FeaturedProjects />
+        <Contact />
       </main>
 
       {/* Mobile Sidebar */}
@@ -117,7 +112,7 @@ export default function Home() {
           ></div>
 
           {/* Sidebar */}
-          <div className="fixed top-0 right-0 h-full w-64 bg-blackzno z-50 transform transition-transform duration-300 ease-in-out md:hidden">
+          <div className="fixed top-0 right-0 h-full w-64 bg-black/95 backdrop-blur-sm z-60 transform transition-transform duration-300 ease-in-out md:hidden">
             <div className="p-6">
               <div className="flex justify-between items-center mb-8">
                 <span className="text-2xl font-bold text-yellow-400">Menu</span>

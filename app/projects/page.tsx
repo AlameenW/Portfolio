@@ -1,6 +1,7 @@
 import GlowCard from "../components/GlowCard";
 import icons from "../icons";
 import { projectsData } from "../data/projects";
+import Link from "next/link";
 
 export default function ProjectsPage() {
   const { GithubIcon } = icons;
@@ -13,7 +14,7 @@ export default function ProjectsPage() {
             All <span className="text-yellow-400">Projects</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Here's a complete collection of projects I've worked on.
+            Here&apos;s a complete collection of projects I&apos;ve worked on.
           </p>
         </div>
 
@@ -54,12 +55,12 @@ export default function ProjectsPage() {
 
         {/* Back to Home Button */}
         <div className="text-center mt-16">
-          <a
+          <Link
             href="/"
             className="inline-block bg-gray-800 text-yellow-400 font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:bg-gray-700 border border-yellow-400/30"
           >
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

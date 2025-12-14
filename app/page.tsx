@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { title } from "process";
 import { useEffect, useState } from "react";
 import Intro from "./pages/Intro";
 import About from "./pages/About";
@@ -12,7 +10,7 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const sections = ["home", "about", "projects", "blogs", "contact"];
-  const { TwitterIcon, GithubIcon, LinkedinIcon, EmailIcon } = icons;
+  const { GithubIcon, LinkedinIcon, EmailIcon } = icons;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +28,7 @@ export default function Home() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [sections]);
 
   const navLinks = [
     { id: "home", title: "Home" },

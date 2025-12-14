@@ -86,4 +86,11 @@ const EmailIcon = () => (
   </svg>
 );
 
-export default {GithubIcon, LinkedinIcon, TwitterIcon, ExternalLinkIcon, EmailIcon}
+const icons = {
+  GithubIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  ExternalLinkIcon,
+  EmailIcon,
+};
+export default icons;

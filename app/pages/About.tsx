@@ -24,22 +24,24 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
         <div className="md:col-span-2">
           <div className="w-full h-100 bg-gray-900 rounded-xl border-2 border-yellow-400/30 flex items-start justify-center overflow-hidden">
-            <img
+            <Image
               src="/headshot.jpeg"
               alt="Alameen Adeku"
+              width={400}
+              height={400}
               className="w-full h-full object-cover"
             />
           </div>
         </div>
         <div className="md:col-span-3">
           <p className="text-gray-300 text-lg mb-6">
-            Hello! I'm Alameen, a Computer Science junior at Southeastern
+            Hello! I&apos;m Alameen, a Computer Science junior at Southeastern
             Louisiana University. As a passionate software developer, I
             specialize in creating websites with beautiful, modern, and
-            user-friendly designs. Recently, I've been diving into Data Mining,
-            Neural Networks, and Artificial Intelligence, with the goal of
-            integrating AI technologies to build more intelligent and powerful
-            software solutions.
+            user-friendly designs. Recently, I&apos;ve been diving into Data
+            Mining, Neural Networks, and Artificial Intelligence, with the goal
+            of integrating AI technologies to build more intelligent and
+            powerful software solutions.
           </p>
           <p className="text-gray-300 text-lg">
             I bring a solid foundation in modern web technologies paired with a

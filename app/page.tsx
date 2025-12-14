@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Intro from "./pages/Intro";
 import About from "./pages/About";
 import icons from "./icons";
@@ -9,7 +9,10 @@ import FeaturedProjects from "./components/FeaturedProjects";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const sections = ["home", "about", "projects", "blogs", "contact"];
+  const sections = useMemo(
+    () => ["home", "about", "projects", "blogs", "contact"],
+    []
+  );
   const { GithubIcon, LinkedinIcon, EmailIcon } = icons;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {

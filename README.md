@@ -1,6 +1,6 @@
 # My Portfolio
 
-A personal portfolio website built with Next.js.
+A personal portfolio website built with Next.js. Deployed link [here](https://portfolio-two-chi-py4cyjb8i1.vercel.app/)
 
 **Author:** Alameen Adeku
 

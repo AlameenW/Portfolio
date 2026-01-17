@@ -15,7 +15,7 @@ export const projectsData = [
       "AI-Powered Security & Care Dashboard that combines camera streaming, AI monitoring, and personal wellness tracking to provide home security and care features.",
     tags: ["React", "Flask", "Tailwind", "JavaScript"],
     repo: "https://github.com/AlameenW/HomePal",
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const projectsData = [
       "The very portfolio you're looking at, designed to be modern and responsive.",
     tags: ["React", "TypeScript", "Tailwind"],
     repo: "https://github.com/AlameenW/Portfolio",
-    featured: true,
+    featured: false,
   },
   {
     id: 4,
@@ -34,6 +34,24 @@ export const projectsData = [
     tags: ["HTML", "CSS", "Vanilla JS"],
     repo: "https://github.com/AlameenW/Weather-app",
     featured: false,
+  },
+  {
+    id: 5,
+    title: "Ewa",
+    description:
+      "A modern, responsive website for EWA, a natural haircare brand focused on thoughtfully crafted products",
+    tags: ["React", "TypeScript", "Tailwind"],
+    repo: "https://github.com/AlameenW/Ewa",
+    featured: true,
+  },
+  {
+    id: 6,
+    title: "SceneIt",
+    description:
+      "SceneIt is a full-stack web application designed for film enthusiasts to log, rate, and discover movies.",
+    tags: ["React", "Tailwind", "Node.js", "Express", "Render", "PostgreSQL"],
+    repo: "https://github.com/AlameenW/SceneIt",
+    featured: true,
   },
 ];
 

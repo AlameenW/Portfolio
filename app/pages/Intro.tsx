@@ -7,12 +7,11 @@ const Intro = () => {
           Alameen Adeku
         </h1>
         <p className="text-2xl md:text-4xl font-light text-yellow-400 mt-4 animate-pulse">
-          Full Stack Engineer | AI & ML.
+          Full Stack Developer 
         </p>
         <p className="text-gray-300 max-w-2xl mx-auto mt-8 text-lg">
           I love building full-scale web applications from concept to
-          deployment. Currently diving deep into AI, machine learning, and
-          neural networks.
+          deployment. Currently diving deep Mobile App Development with React Native and Machine Learning fundamentals.
         </p>
         <a
           href="#contact"

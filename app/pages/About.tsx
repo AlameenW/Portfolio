@@ -38,10 +38,9 @@ const About = () => {
             Hello! I&apos;m Alameen, a Computer Science junior at Southeastern
             Louisiana University. As a passionate software developer, I
             specialize in creating websites with beautiful, modern, and
-            user-friendly designs. Recently, I&apos;ve been diving into Data
-            Mining, Neural Networks, and Artificial Intelligence, with the goal
-            of integrating AI technologies to build more intelligent and
-            powerful software solutions.
+            user-friendly designs. I'm currently learning mobile application
+            development with React Native and exploring Machine Learning and
+            AI—areas I'm deeply curious about and excited to grow into.
           </p>
           <p className="text-gray-300 text-lg">
             I bring a solid foundation in modern web technologies paired with a
